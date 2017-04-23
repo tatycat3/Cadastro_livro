@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Cadastro de Livro</title>
+    </h:head>
+    <h:body>
+        <h1><i>Cadastrar Livro</i></h1>
+        <h:form id="formulario">
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Titulo" for="titulo"/>
+                <h:inputText id="titulo" value="#{bean.livro.titulo}"/>
+                
+                <h:outputLabel value="Paginas" for="paginas"/>
+                <h:inputText id="paginas" value="#{bean.livro.paginas}"/>
+                
+                <h:outputLabel value="ISBN" for="isbn"/>
+                <h:inputText id="isbn" value="#{bean.livro.isbn}"/>
+                
+                <h:outputLabel value="Autor Principal" for="autor"/>
+                <h:inputText id="autor" value="#{bean.livro.autor}"/>
+                
+                <h:commandButton value="Cadastrar" action="#{bean.cadastrar()}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
